@@ -1,26 +1,9 @@
-.heros{
-    background-image: url(./assets/pexels-pixabay-36717.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.opa{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(22px);
-}
-.opa:hover{
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(22px);
-    outline:2px solid  rgba(255, 255, 255, 1) ;   
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-}
-.menu{
-    background: rgba(255, 255, 255,0.1);
-    backdrop-filter: blur(15px); 
-}
-.out{
- outline:2px solid  rgba(255, 255, 255, 0.1) ;   
-}
-.heros{
-    background-color: rgba(0, 0, 0, 0.3);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
 }
