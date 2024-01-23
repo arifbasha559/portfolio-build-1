@@ -1,0 +1,26 @@
+.heros{
+    background-image: url(./assets/pexels-pixabay-36717.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.opa{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(22px);
+}
+.opa:hover{
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(22px);
+    outline:2px solid  rgba(255, 255, 255, 1) ;   
+
+}
+.menu{
+    background: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(15px); 
+}
+.out{
+ outline:2px solid  rgba(255, 255, 255, 0.1) ;   
+}
+.heros{
+    background-color: rgba(0, 0, 0, 0.3);
+}
