@@ -2,14 +2,14 @@
 import '../App.css'
 const Navbar = () => {
   return (
-    <div className="flex w-4/5 h-16 absolute top-0  justify-between items-center">
+    <div className="flex max-w-screen-xl bg-[rgb(4,31,49)] border-b border-white/35 h-16 mx-auto z-50 sticky top-0  justify-between items-center">
           <div className="left ">
             <a href="" className="text-white font-medium">
               Home
             </a>
           </div>
-          <div className="right  flex gap-20  items-center">
-            <a href="" className="text-white font-medium">
+          <div className="right  flex gap-5 md:gap-16  items-center">
+            <a href="#projects" className="text-white font-medium">
               Projects
             </a>
             <button
