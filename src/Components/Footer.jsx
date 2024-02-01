@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import React from 'react'
 
 import { TbBrandGithubFilled } from "react-icons/tb";
@@ -6,7 +7,7 @@ import { IconContext } from "react-icons";
 import { FaLinkedinIn } from "react-icons/fa6";
 
 
-const Footer = () => {
+const Footer = (props) => {
     const emailDeveloper = () => {
         var emailAddress = "arifbasha559@gmail.com";
         var subject = "Feedback for your application";
@@ -73,9 +74,9 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">
+                            <button  onClick={()=>{props.create()}} className="hover:underline">
                                 Contact
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </div>

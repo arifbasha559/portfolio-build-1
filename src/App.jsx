@@ -8,10 +8,23 @@ import Project from "./Components/Project";
 import { useState } from "react";
 import Skill from "./Components/Skill";
 import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
+import { useEffect } from "react";
 
 const App = () => {
-
-  const [project, setProject] = useState([
+  let [inp,setInp]= useState("-translate-y-[200%]") ;
+  let [scr,setScr]= useState("scroll") ;
+  const inputa = () => {
+  if(inp !=="-translate-y-[200%]"){
+    setInp('-translate-y-[200%]')
+    setScr('asda')
+  }
+  else{
+    setInp('translat')
+    setScr('overflow-y-hidden h-screen')
+  }}
+  const con =inputa;
+  const [project] = useState([
     {
       pName: "Mak Todos",
       pDesc:
@@ -29,15 +42,31 @@ const App = () => {
       image: "./images/makTodos.png"
     },
   ]);
+  useEffect(() => {
+    document.addEventListener('keydown', evt => {
+      if (evt.key === 'Escape' ) {
+          // alert('Escape pressed');
+          if(scr != 'scroll'){
+           con()
+          }
+          else{
+            return;
+          }
+      }
+  });
+    
+  }, [scr,con])
+  
   return (
-    <div className="scroll  bg-[#041F31] ">
+    <div className={`scroll bg-[#041F31] ${scr} dh`}>
       {/* navbar */}
-      <div className=" mx-auto h-full heros w-4/5 ">
-        <Navbar />
+      <div className="max-w-screen-xl relative mx-auto h-full heros w-4/5  ">
+        <Navbar create={inputa} />
         {/* navbar */}
-
+      
+       
         {/* heros */}
-        <Hero />
+        <Hero create={inputa} />
         <div id="about" className=""></div>
         {/* heros */}
         <div className="max-w-screen-xl mx-auto flex flex-col gap-32 mt-20">
@@ -52,7 +81,7 @@ const App = () => {
                 My journey has been marked by a dedication to Proficient in
                 C,C++,Python,Javascript,Full Stack development. With a background in
                 BCA, I bring a unique perspective to Software Industry.
-          <div id="projects"></div>
+          <span id="projects"></span>
               </p>
             </div>
           </div>
@@ -95,9 +124,13 @@ const App = () => {
             Know more
           </a>
         </div>
-        <div className="footer ">
-          <Footer/>
+        <div className="footer "  >
+          <Footer create={inputa} />
         </div>
+        
+      </div>
+      <div className="w-screen bg-black">
+        <Contact  toggle={inp} create={inputa} />
       </div>
     </div>
   );

@@ -7,3 +7,18 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
 }
+*::-webkit-scrollbar {
+    width: 0.4em; 
+  }
+  *::-webkit-scrollbar,
+  *::-webkit-scrollbar-thumb {
+    overflow:visible;
+    border-radius: 10px;
+  }
+  *::-webkit-scrollbar-track-piece{
+    background:#041f31; 
+  }
+  *::-webkit-scrollbar-thumb {
+    background:#072b43; 
+  }
+  

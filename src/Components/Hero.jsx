@@ -2,7 +2,7 @@ import '../App.css'
 import { IconContext } from "react-icons";
 import { FaArrowDown } from "react-icons/fa6";
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div className="py-10">
 
@@ -13,7 +13,7 @@ const Hero = () => {
                 <h1 className="max-w-2xl mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl bg-gradient-to-r from-[rgb(0,245,160)] to-[rgb(0,217,245)] bg-clip-text text-transparent ">ARIF BASHA .H</h1>
                 <p className="max-w-xl tracking-wider mb-6 font-light  lg:mb-8 md:text-md lg:text-md text-gray-300"> a Web Developer with a passion for software development. My journey has been marked by a dedication to Proficient in C,C++,Python,Javascript,Full Stack Development. With a background in BCA, I bring a unique perspective to Software Industry.</p>
                 <button
-                  href=""
+                  onClick={()=>{props.create()}}
                   className="text-[#041F31] font-medium py-3 px-6 rounded-md hover:opacity-80 bg-gradient-to-r from-[rgb(0,245,160)] to-[rgb(0,217,245)] "
                 >
                   Contact
