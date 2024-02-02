@@ -41,7 +41,7 @@ const Footer = (props) => {
                     <div className="flex flex-col gap-2">
                         <a
                             href="https://www.linkedin.com/in/arif-basha-3a7879268/"
-                            target="_blank" className="no-underline w-fit mx-auto bg-gradient-to-r from-[rgb(0,245,160)] to-[rgb(0,217,245)] p-2 rounded-full"
+                            target="_blank"  className="no-underline w-fit mx-auto bg-gradient-to-r from-[rgb(0,245,160)] to-[rgb(0,217,245)] p-2 rounded-full"
                         >
                             <IconContext.Provider value={{ size: "2em" }}>
                                 <FaLinkedinIn />{" "}
