@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import '../App.css'
 import { IconContext } from "react-icons";
 import { FaArrowDown } from "react-icons/fa6";
 
 const Hero = (props) => {
   return (
-    <div className="py-10">
+    <div className="h-screen">
 
-          <section className="bg-inherit  flex justify-center items-center relative"  >
+          <section className="bg-inherit h-4/5 flex justify-center items-center relative"  >
             <div className=" relative flex flex-col-reverse gap-10 md:grid max-w-screen-xl py-8 mx-auto  lg:gap-8 xl:gap-0 lg:py-16  lg:grid-cols-12">
               <div className="mr-auto place-self-center relative lg:col-span-7">
                 <p className="max-w-2xl relative mb-4 font-normal  md:text-md lg:text-lg text-gray-400" id='hero'>Hello! I&rsquo;m </p>
@@ -23,7 +24,7 @@ const Hero = (props) => {
                 <img className="" src="https://www.ahmedazmy.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoder1.3b970e5d.png&w=1920&q=75" alt="mockup" />
               </div>
             </div>
-            <a className="absolute p-4 lg:bottom-5 -bottom-5 hover:bg-[rgba(0,0,0,0.27)] rounded-full " href="#about" >
+            <a className="absolute p-4 -bottom-5 hover:bg-[rgba(0,0,0,0.27)] rounded-full " href="#about" >
               <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
                 <FaArrowDown />
               </ IconContext.Provider>

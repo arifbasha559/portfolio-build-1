@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 import emailjs from 'emailjs-com';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { IconContext } from "react-icons";
 import { IoMdCloseCircle } from "react-icons/io";
 

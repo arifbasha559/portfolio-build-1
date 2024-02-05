@@ -22,3 +22,7 @@
     background:#072b43; 
   }
   
+  .gra-color{
+    background: linear-gradient(to right,rgb(0,245,160),rgb(0,217,245));
+    background-clip: text;
+  }

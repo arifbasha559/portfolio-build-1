@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 
+import { TbWorldCheck } from "react-icons/tb";
+
 const Project = (props) => {
     return (
         <div>
@@ -10,7 +12,7 @@ const Project = (props) => {
 
 
                     <div className="max-w-md rounded-lg shadow bg-[#222525] ">
-                        <a href={props.pLink} target="_blank" rel="noreferrer" className="h-2/3">
+                        <a href={props.pLink} target="_blank" rel="noreferrer" className="h-2/5">
                             <img className="rounded-t-lg  object-top" src={props.img} alt="" />
                         </a>
                         <div className="p-5 bg-[#222525]">
@@ -21,7 +23,7 @@ const Project = (props) => {
 
                             {props.btn.map((data,index)=>{
                                 
-                                return (<span  key={index} className="inline-flex mt-2 items-center px-2.5 py-1.5 text-sm font-medium text-center text-black bg-gradient-to-r from-[rgb(0,245,160)] to-[rgb(0,217,245)] rounded-lg ">
+                                return (<span  key={index} className="inline-flex mt-2 items-center px-2.5 py-1.5 text-sm font-light text-center text-white bg-[#171919] from-[rgb(0,245,160)] to-[rgb(0,217,245)] rounded-lg gap-1 "><TbWorldCheck />
                                 {data}
 
                             </span>)
@@ -37,4 +39,4 @@ const Project = (props) => {
     )
 }
 
-export default Project
+export default Project;
