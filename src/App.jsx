@@ -55,37 +55,41 @@ const App = () => {
 
   return (
     <Router>
-      <div className={`scroll bg-[#041F31] min-h-screen ${scr} dh`}>
+      <div className={`scroll relative bg-[#041F31] min-h-screen ${scr} dh`}>
         {/* navbar */}
-        <div className="max-w-screen-xl relative mx-auto h-full heros w-4/5  ">
-          <Navbar create={inputa} />
+        <div className="max-w-screen-xl  mx-auto h-full heros w-screen md:w-4/5  ">
+          <div className="w-11/12 md:w-full sticky top-0 z-50 mx-auto">
+            <Navbar create={inputa} />
+          </div>
+          <div className="w-11/12 md:w-full mx-auto">
 
-          <Routes>
-            <Route path="/" element={<Home inp={inp} inputa={inputa} />} />
-            <Route
-              path="/project"
-              element={
-                <div className="min-h-screen mt-4">
-                  <h2 className="px-4 me text-xl transition-all duration-200 ease-linear text-white inline-block mb-5 font-semibold gra-color hover:text-transparent">My Projects</h2>
-                  <div className="flex flex-wrap gap-3">
+            <Routes>
+              <Route path="/" element={<Home inp={inp} inputa={inputa} />} />
+              <Route
+                path="/project"
+                element={
+                  <div className="min-h-screen mt-4">
+                    <h2 className="px-4 me text-xl transition-all duration-200 ease-linear text-white inline-block mb-5 font-semibold gra-color hover:text-transparent">My Projects</h2>
+                    <div className="flex flex-wrap gap-3">
 
-                    {projects.map((data, index) => {
-                      return (
-                        <Project
-                          key={index}
-                          img={data.image}
-                          title={data.pName}
-                          desc={data.pDesc}
-                          pLink={data.pLink}
-                          btn={data.btn}
-                        />
-                      );
-                    })}
+                      {projects.map((data, index) => {
+                        return (
+                          <Project
+                            key={index}
+                            img={data.image}
+                            title={data.pName}
+                            desc={data.pDesc}
+                            pLink={data.pLink}
+                            btn={data.btn}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              }
-            />
-          </Routes>
+                }
+              />
+            </Routes>
+          </div>
         </div>
         <div className={`w-screen bg-black`}>
           <Contact toggle={inp} create={inputa} />

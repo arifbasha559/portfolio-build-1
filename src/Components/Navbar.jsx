@@ -6,7 +6,7 @@ import '../App.css'
 
 const Navbar = (props) => {
   return (
-    <div className="flex max-w-screen-xl bg-[rgb(4,31,49)]  border-b w-full border-white/35 h-16 mx-auto z-10 sticky top-0 pr-1 justify-between items-center">
+    <div className="flex max-w-screen-xl bg-[rgb(4,31,49)]  border-b w-full border-white/35 h-14 mx-auto sticky z-10 top-0 pr-1 justify-between items-center">
           <div className="left ">
             <Link to="/" className="text-white font-medium">
               Home
